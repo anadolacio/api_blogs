@@ -6,13 +6,12 @@ module.exports = {
       post_id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
-        autoIncrement:true,
-        allowNull: false,
         onDelete: 'CASCADE',
         OnUpdate: 'CASCADE',
       },
       category_id: { 
         type: Sequelize.INTEGER, 
+        primaryKey: true,
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
     },
