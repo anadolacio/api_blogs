@@ -27,7 +27,7 @@ app.get('/user/:id', validateJwt, UserController.getUserById);
 
 // Category
 
-app.post('/categories', CategoryController.createCategory);
+app.post('/categories', validateJwt, CategoryController.createCategory);
 app.get('/categories', validateJwt, CategoryController.getAllCategories);
 
 // É importante exportar a constante `app`,
