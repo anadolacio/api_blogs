@@ -11,7 +11,7 @@ const loginField = async (req, res) => {
          }
 
         const userFound = await LoginService.loginField(email, password);
-        console.log('USER antes do if', userFound);
+        // console.log('USER antes do if', userFound);
         if (!userFound) {
             // console.log('USER dentro do if', userFound);
             return res.status(400).json({ message: 'Invalid fields' });

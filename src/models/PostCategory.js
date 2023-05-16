@@ -17,7 +17,7 @@ const PostCategorySchema = (sequelize, DataTypes) => {
                 foreignKey: 'post_id',
                 otherKey: 'category_id',
                 through: PostCategory,
-                as: 'category'});
+                as: 'categories'});
             models.Category.belongsToMany(
                     models.BlogPost, { 
                         foreignKey: 'category_id',
