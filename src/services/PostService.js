@@ -19,13 +19,14 @@ return allPosts;
 };
 
 const getPostById = async (id) => { 
-    await BlogPost.findOne({
+    const postById = await BlogPost.findOne({
     where: { id },
     include: [
-        { model: User, as: 'user' },
+        { model: User, as: 'user', attributes: { exclude: ['password'] } },
         { model: Category, as: 'categories' },
     ],
 });
+return postById;
 };
 
 module.exports = {
