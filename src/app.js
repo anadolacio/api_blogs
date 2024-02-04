@@ -33,8 +33,10 @@ app.get('/categories', validateJwt, CategoryController.getAllCategories);
 
 // Posts
 
+app.post('/post', validateJwt, PostController.createBlogPost);
 app.get('/post', validateJwt, PostController.getAllPosts);
 app.get('/post/:id', validateJwt, PostController.getPostById);
+app.delete('/post/:id', validateJwt, PostController.deletePost);
 
 // É importante exportar a constante `app`,
 // para que possa ser utilizada pelo arquivo `src/server.js`
